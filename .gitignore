@@ -6,7 +6,9 @@
 # Node artifact files
 node_modules/
 dist/
-
+ios/build/
+ios/Pods/
+android/app/build/
 # Compiled Java class files
 *.class
 
