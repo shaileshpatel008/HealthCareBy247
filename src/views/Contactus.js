@@ -1,0 +1,135 @@
+import React, { useEffect,useState } from 'react';
+import { SafeAreaView,Image,View, Text, ActivityIndicator, TouchableOpacity, ScrollView,Linking,Alert } from 'react-native';
+import images from '../utils/images';
+import common from '../styles/commonStyle';
+import stylesFonts from '../styles/styleFonts';
+import styles from '../styles/styleContactus';
+import { api } from '../utils/ApiService/api';
+import colors from '../utils/colors';
+
+const ContactUsScreen = ( { navigation }) => {
+  const [expandedBranch, setExpandedBranch] = useState(null);
+  const [branches, setBranches] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const handleCall = ({phoneNumber}) => {
+    const url = `tel:+91${phoneNumber}`;
+    Linking.openURL(url).catch((err) => Alert.alert('Error', 'Could not open dialer'));
+  };
+  const toggleBranch = (branchId) => {
+    setExpandedBranch(expandedBranch === branchId ? null : branchId);
+  };
+
+  useEffect(() => {
+    const fetchBranches = async () => {
+        try {
+            const response = await api.get('/branches.php');
+            if (response.data.status === 'success') {
+                setBranches(response.data.data); // Set the branches data
+            } else {
+                setError('Failed to fetch branches');
+            }
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    fetchBranches();
+}, []);
+
+    if (loading) {
+        return <View style={styles.background}> <ActivityIndicator size="large" color ={ colors.primary }/>;</View>
+    }
+    else if (error) {
+        return <Text>Error: {error}</Text>;
+    }
+
+
+  return (
+    <SafeAreaView style={common.container}>
+    <View style={styles.background}>
+      {/* Header */}
+      <View style={common.header}>
+          <TouchableOpacity  onPress={() => navigation.goBack()}>
+          <Image source={images.back} style={styles.headerIcon} />
+          </TouchableOpacity>
+          <Text style={[styles.headerTitle,stylesFonts.bold]}>Contact Us</Text>
+          <TouchableOpacity>
+          <Image source={images.aboutus} style={styles.headerIcon} />
+          </TouchableOpacity>
+     </View>
+
+      <ScrollView style={styles.content}>
+        {/* Co-ordinator */}
+        <View style={styles.section}>
+          <Text style={[styles.sectionTitle,stylesFonts.bold]}>Co-ordinator</Text>
+          <Text style={[styles.sectionContent,stylesFonts.medium]}>Dr. Hiral Bhavesh Faldu</Text>
+        </View>
+
+        {/* Our Branches */}
+        <View style={styles.section}>
+          <Text style={[styles.sectionTitle,stylesFonts.bold]}>Our Branches</Text>
+
+          {branches.map(branch => (
+            <View key={branch.id} style={styles.branchContainer}>
+              <TouchableOpacity
+                style={styles.branchHeader}
+                onPress={() => toggleBranch(branch.id)}
+              >
+                <View style={styles.branchHeaderLeft}>
+                  <Image source={images.branchIcon} style={styles.branchIcon} />
+                  <Text style={[styles.branchName,stylesFonts.bold]}>{branch.Name}</Text>
+                </View>
+                <Image
+                  source={expandedBranch === branch.id ? images.dropup : images.dropdown}
+                  style={styles.branchIcon}
+                />
+              </TouchableOpacity>
+
+              {expandedBranch === branch.id && (
+                <View style={styles.branchDetails}>
+                    {/* Branch Address */}
+                  <View style={styles.detailRow}>
+                  <Image source={images.address} style={styles.detailsIcon} />
+                  <Text style={[styles.detailText,stylesFonts.medium]}>Address:</Text>
+                  <TouchableOpacity>
+                    <Image source={images.map} style={styles.detailsIcon} />
+                  </TouchableOpacity>
+                  </View>
+                  <View style={styles.detailRow}>
+                  <Text style={[styles.detailSubText,stylesFonts.regular]}>{branch.Address}</Text>
+                  </View>
+                    {/* Branch Mobile */}
+                    <View style={styles.detailRow}>
+                  <Image source={images.phone} style={styles.detailsIcon} />
+                  <Text style={[styles.detailText,stylesFonts.medium]}>Mobile:</Text>
+                  </View>
+                  <View style={styles.detailRow}>
+                  <TouchableOpacity onPress={handleCall(branch.ContactNo_1)}>
+                   <Text style={[styles.detailSubText,stylesFonts.regular]}>{branch.ContactNo_1}</Text>
+                  </TouchableOpacity>
+                  </View>
+                    {/* Branch Phone */}
+                    <View style={styles.detailRow}>
+                  <Image source={images.phone} style={styles.detailsIcon} />
+                  <Text style={[styles.detailText,stylesFonts.medium]}>Phone:</Text>
+                  </View>
+                  <View style={styles.detailRow}>
+                  <TouchableOpacity onPress={handleCall(branch.ContactNo_2)}>
+                  <Text style={[styles.detailSubText,stylesFonts.regular]}>{branch.ContactNo_2}</Text>
+                  </TouchableOpacity>
+                  </View>
+                </View>
+              )}
+            </View>
+          ))}
+        </View>
+      </ScrollView>
+    </View>
+    </SafeAreaView>
+  );
+};
+export default ContactUsScreen;
+

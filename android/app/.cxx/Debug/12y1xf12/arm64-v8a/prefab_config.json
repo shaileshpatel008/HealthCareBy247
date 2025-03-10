@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "prefabPath": "/Users/monangchampaneri/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar",
+  "packages": [
+    "/Users/monangchampaneri/.gradle/caches/8.10.2/transforms/493cb83b67a040299fb8a695d555b681/transformed/react-android-0.78.0-debug/prefab",
+    "/Users/monangchampaneri/Desktop/BCreative/HealthCare24x7/HealthCareLab/node_modules/react-native-reanimated/android/build/intermediates/prefab_package/debug/prefab",
+    "/Users/monangchampaneri/.gradle/caches/8.10.2/transforms/036baa93aa40cd2773c52577e2f2a480/transformed/hermes-android-0.78.0-debug/prefab",
+    "/Users/monangchampaneri/.gradle/caches/8.10.2/transforms/99e79a1f7aa2031788e4f4af2a657d48/transformed/fbjni-0.7.0/prefab"
+  ]
+}
