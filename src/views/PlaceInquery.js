@@ -264,7 +264,6 @@ const PlaceInquery = ({ navigation,route }) => {
       else if (mobilenumber.length != 10) {
         Alert.alert('Error', 'Please enter valid mobile number!');
       } 
-
       else if (email.length < 10) {
         Alert.alert('Error', 'Please enter valid email!');
       } 

@@ -33,6 +33,7 @@ logoView:{
     width:160,
     height:160,
     paddingBottom:10,
+    resizeMode: 'contain',
 },
 rowStyle:{
     flexDirection: 'row',
