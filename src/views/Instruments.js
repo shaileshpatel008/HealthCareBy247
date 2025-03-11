@@ -21,7 +21,7 @@ const InstrumentScreen = ({ navigation }) => {
             <WebView 
                 ref={webViewRef} 
                 style={style.webview} 
-                source={{ uri: "https://healthcare24x7.com/hcplab-pages/facilities.html" } }
+                source={{ uri: "https://healthcare24x7.com/hcplab-pages/Instrument.html" } }
                 javaScriptEnabled={true}
                 domStorageEnabled={true}
                 scalesPageToFit={true} // Ensures content fits screen

@@ -17,6 +17,7 @@ const ContactUsScreen = ( { navigation }) => {
     Linking.openURL(url).catch((err) => Alert.alert('Error', 'Could not open dialer'));
   };
   const toggleBranch = (branchId) => {
+    console.log("Branch ID:",branchId);
     setExpandedBranch(expandedBranch === branchId ? null : branchId);
   };
 
@@ -25,6 +26,7 @@ const ContactUsScreen = ( { navigation }) => {
         try {
             const response = await api.get('/branches.php');
             if (response.data.status === 'success') {
+                console.log(response.data.data);
                 setBranches(response.data.data); // Set the branches data
             } else {
                 setError('Failed to fetch branches');
@@ -73,22 +75,22 @@ const ContactUsScreen = ( { navigation }) => {
           <Text style={[styles.sectionTitle,stylesFonts.bold]}>Our Branches</Text>
 
           {branches.map(branch => (
-            <View key={branch.id} style={styles.branchContainer}>
+            <View key={branch.BranchId} style={styles.branchContainer}>
               <TouchableOpacity
                 style={styles.branchHeader}
-                onPress={() => toggleBranch(branch.id)}
+                onPress={() => toggleBranch(branch.BranchId)}
               >
                 <View style={styles.branchHeaderLeft}>
                   <Image source={images.branchIcon} style={styles.branchIcon} />
                   <Text style={[styles.branchName,stylesFonts.bold]}>{branch.Name}</Text>
                 </View>
                 <Image
-                  source={expandedBranch === branch.id ? images.dropup : images.dropdown}
+                  source={expandedBranch === branch.BranchId ? images.dropup : images.dropdown}
                   style={styles.branchIcon}
                 />
               </TouchableOpacity>
 
-              {expandedBranch === branch.id && (
+              {expandedBranch === branch.BranchId && (
                 <View style={styles.branchDetails}>
                     {/* Branch Address */}
                   <View style={styles.detailRow}>
@@ -107,7 +109,7 @@ const ContactUsScreen = ( { navigation }) => {
                   <Text style={[styles.detailText,stylesFonts.medium]}>Mobile:</Text>
                   </View>
                   <View style={styles.detailRow}>
-                  <TouchableOpacity onPress={handleCall(branch.ContactNo_1)}>
+                  <TouchableOpacity onPress={() => handleCall(branch.ContactNo_1)}>
                    <Text style={[styles.detailSubText,stylesFonts.regular]}>{branch.ContactNo_1}</Text>
                   </TouchableOpacity>
                   </View>
@@ -117,7 +119,7 @@ const ContactUsScreen = ( { navigation }) => {
                   <Text style={[styles.detailText,stylesFonts.medium]}>Phone:</Text>
                   </View>
                   <View style={styles.detailRow}>
-                  <TouchableOpacity onPress={handleCall(branch.ContactNo_2)}>
+                  <TouchableOpacity onPress={ () => handleCall(branch.ContactNo_2)}>
                   <Text style={[styles.detailSubText,stylesFonts.regular]}>{branch.ContactNo_2}</Text>
                   </TouchableOpacity>
                   </View>

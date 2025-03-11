@@ -75,11 +75,11 @@ const stylesMyCart = StyleSheet.create({
     fontSize: 16,
   },
   priceContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
-    marginRight: 16,
+    justifyContent: 'flex-start',
   },
   priceSections:{
+    flex:7,
     flexDirection: 'column',
     alignItems: 'left',
     flexWrap:'wrap',
@@ -88,6 +88,7 @@ const stylesMyCart = StyleSheet.create({
   },
   packageName: {
     flex: 1,
+    width:'100%',
     fontSize: 16,
     color:colors.primary
   },

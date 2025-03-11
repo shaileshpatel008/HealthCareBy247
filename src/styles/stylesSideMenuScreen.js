@@ -12,9 +12,9 @@ const stylesSideMenuScreen = StyleSheet.create({
   },
   logo:{
     width:100,
-    height:100,
-    resizeMode: "cover",
-    marginBottom:14,
+    height:130,
+    resizeMode: 'contain',
+    marginBottom:0,
   },
   labName:{
     fontSize: 16,
@@ -25,10 +25,10 @@ const stylesSideMenuScreen = StyleSheet.create({
     color: colors.primary,
   },
   header: {
-    marginTop: 55,
+    marginTop: 45,
     marginLeft: 20,
     marginRight: 20,
-    marginBottom:20,
+    marginBottom:10,
     backgroundColor: colors.white,
     alignItems: 'left',
   },
@@ -36,8 +36,6 @@ const stylesSideMenuScreen = StyleSheet.create({
     flexDirection: "row",  // Arrange items in a row
     alignItems: 'flex-start',  // Align items vertically
     justifyContent: "space-between", // Space between image & icon
-    // padding: 10,
-    // margin: 10,
   },
   background: {
     width: "100%",
@@ -54,12 +52,15 @@ const stylesSideMenuScreen = StyleSheet.create({
   menuItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    height:64,
+    height:54,
     marginVertical: 0,
   },
   icon: {
-    margin:10,
+    width:18,
+    height:18,
+    marginRight:10,
     color: colors.white,
+    resizeMode: 'contain',
   },
   menuText: {
     fontSize: 18,    

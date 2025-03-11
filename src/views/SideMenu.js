@@ -1,6 +1,6 @@
 import React from "react";
 import { CommonActions } from "@react-navigation/native";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity ,Linking} from "react-native";
 import { DrawerContentScrollView } from "@react-navigation/drawer";
 import images from "../utils/images";
 import style from "../styles/stylesSideMenuScreen";
@@ -12,6 +12,15 @@ import { Screen } from "react-native-screens";
 const SideMenuScreen = (props) => {
   const { menuData } = useMenuViewModel();
   const { config } = useConfig();
+
+
+  const handleEmailPress = (email) => {
+    Linking.openURL(`mailto:${email}`);
+  };
+  const handleWebsitePress = (url) => {
+    Linking.openURL(url);
+  };
+  
   return (
     <View style={style.container}>
       {/* Header Section */}
@@ -25,10 +34,12 @@ const SideMenuScreen = (props) => {
                 <Image source={images.menuClose} size={24} style={ style.icon} />
               </TouchableOpacity>
         </View>
-       
+        <TouchableOpacity onPress={() => handleWebsitePress('https://healthcare24x7.com/')}>
        <Text style={[style.labName, styleFont.semibold]}>Healthcare 24x7 Lab</Text> 
+       </TouchableOpacity>
+       <TouchableOpacity onPress={() => handleEmailPress(config.Email)}>
        <Text style={[style.email,styleFont.semibold]}>{config.Email}</Text> 
-      
+       </TouchableOpacity>
       </View>
 
     <View style={style.background}>

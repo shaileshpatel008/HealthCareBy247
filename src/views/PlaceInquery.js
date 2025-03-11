@@ -252,31 +252,40 @@ const PlaceInquery = ({ navigation,route }) => {
   const [address_2, setAddress_2] = useState('');
   const [location, setLocation] = useState('');
 
- const SubmitVisit = () => {
-    if (name.trim() === '' || mobilenumber.trim() === '' || email.trim() === '' || address_1.trim() === '' || date === '' || selectedArea == null || selectedPincode == null ) {
-      Alert.alert('Error', 'Please enter all requied filed !');
-    } else if (name.length < 3) {
-      Alert.alert('Error', 'Please enter valid name!');
-    } 
-    else if (mobilenumber.length != 10) {
-      Alert.alert('Error', 'Please enter valid mobile number!');
-    } 
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+  };
 
-    else if (email.length < 10) {
-      Alert.alert('Error', 'Please enter valid email!');
-    } 
-    else if (address_1.length < 5) {
-      Alert.alert('Error', 'Please enter valid address!');
-    } 
-    else if (selectedArea === null) {
-      Alert.alert('Error', 'Please select area!');
-    } 
-    else if (selectedPincode === null) {
-      Alert.alert('Error', 'Please select pincode!');
-    } 
-    else if (selectedTimeSlot === null) {
-      Alert.alert('Error', 'Please select appointment time!');
-    } 
+ const SubmitVisit = () => {
+    if (name.length < 3) {
+        Alert.alert('Error', 'Please enter valid name!');
+      } 
+      else if (mobilenumber.length != 10) {
+        Alert.alert('Error', 'Please enter valid mobile number!');
+      } 
+
+      else if (email.length < 10) {
+        Alert.alert('Error', 'Please enter valid email!');
+      } 
+      else if (!validateEmail(email)) {
+        Alert.alert('Error', 'Please enter valid email!');
+      } 
+      else if (address_1.length < 5) {
+        Alert.alert('Error', 'Please enter valid address!');
+      } 
+      else if (selectedArea === null) {
+        Alert.alert('Error', 'Please select area!');
+      } 
+      else if (selectedPincode === null) {
+        Alert.alert('Error', 'Please select pincode!');
+      } 
+      else if (selectedTimeSlot === null) {
+        Alert.alert('Error', 'Please select appointment time!');
+      } 
+      else if (selectedPackage.length == 0 && selectedTest.length == 0 && imageUri == null)  {
+        Alert.alert('Error', 'Please select package or test or upload your prescriptions!');
+      }
     else {
       SubmitBookAVisitRequest();
     }
@@ -422,6 +431,7 @@ const PlaceInquery = ({ navigation,route }) => {
                         keyboardType='phone-pad'
                         value={mobilenumber}
                         onChangeText={setMobileNumber} // Updates state on text change
+                        maxLength={10}// Updates state on text change
                 />
              </View>
 

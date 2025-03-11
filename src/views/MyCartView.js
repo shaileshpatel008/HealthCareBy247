@@ -56,7 +56,7 @@ const MyCartView = ({ navigation }) => {
       return (
         <View style={styles.testContainer}>
                 <View style={styles.priceSections}>
-                    <Text style={[styles.packageName, stylesFonts.semibold]}>{item.ReportName}</Text>
+                    <Text style={[styles.packageName, stylesFonts.semibold]} >{item.ReportName}</Text>
                     <Text style={[styles.price, stylesFonts.semibold]}>₹{item.ReportRate}</Text>
                 </View>
                   <TouchableOpacity

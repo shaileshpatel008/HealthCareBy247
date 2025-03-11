@@ -248,11 +248,17 @@ const BookAVisit = ({ navigation }) => {
   const [address_1, setAddress_1] = useState('');
   const [address_2, setAddress_2] = useState('');
   const [location, setLocation] = useState('');
+  
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+  };
 
   const SubmitVisit = () => {
-        if (name.trim() === '' || mobilenumber.trim() === '' || email.trim() === '' || address_1.trim() === '' || date === '' || selectedArea == null || selectedPincode == null ) {
-          Alert.alert('Error', 'Please enter all requied filed !');
-        } else if (name.length < 3) {
+        // if (name.trim() === '' || mobilenumber.trim() === '' || email.trim() === '' || address_1.trim() === '' || date === '' || selectedArea == null || selectedPincode == null ) {
+        //   Alert.alert('Error', 'Please enter all requied filed !');
+        // } else
+        if (name.length < 3) {
           Alert.alert('Error', 'Please enter valid name!');
         } 
         else if (mobilenumber.length != 10) {
@@ -260,6 +266,9 @@ const BookAVisit = ({ navigation }) => {
         } 
 
         else if (email.length < 10) {
+          Alert.alert('Error', 'Please enter valid email!');
+        } 
+        else if (!validateEmail(email)) {
           Alert.alert('Error', 'Please enter valid email!');
         } 
         else if (address_1.length < 5) {
@@ -274,6 +283,9 @@ const BookAVisit = ({ navigation }) => {
         else if (selectedTimeSlot === null) {
           Alert.alert('Error', 'Please select appointment time!');
         } 
+        else if (selectedPackage.length == 0 && selectedTest.length == 0 && imageUri == null)  {
+          Alert.alert('Error', 'Please select package or test or upload your prescriptions!');
+        }
         else {
           SubmitBookAVisitRequest();
         }
@@ -435,7 +447,8 @@ const BookAVisit = ({ navigation }) => {
                         placeholder="Enter  Mobile Number"
                         keyboardType='phone-pad'
                         value={mobilenumber}
-                        onChangeText={setMobileNumber} // Updates state on text change
+                        onChangeText={setMobileNumber} 
+                        maxLength={10}// Updates state on text change
                 />
              </View>
 
@@ -571,7 +584,7 @@ const BookAVisit = ({ navigation }) => {
                  <View style={[styles.sectionView,styles.columnStyle]}>
                  <Text style={[stylesFonts.semibold,styles.filedText]}>Select Package</Text>
                  <DropdownComponent
-                    isClearable={true}                    
+                    isClearable={false}                    
                     placeholder='Select Package'
                     selectedValue={selectedPackage}
                     isSearchEnabled={true}

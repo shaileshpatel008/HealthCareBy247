@@ -8,10 +8,11 @@ import {
     TextInput,
     StyleSheet,
     Dimensions,
+    Image
 } from 'react-native';
 import colors from '../utils/colors';
-// import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import images from '../utils/images';
+
 
 const { width, height } = Dimensions.get('window');
 
@@ -148,14 +149,14 @@ const DropdownComponent = React.memo(({
                                             />
                                             {searchQuery && (
                                                 <TouchableOpacity onPress={clearSearch} style={styles.clearButton}>
-                                                    <MaterialIcons name="clear" size={20} color="red" />
+                                                    <Image source={images.close} size={20} color="red" />
                                                 </TouchableOpacity>
                                             )}
                                         </View>
                                     )}
                                     {loading ? (
                                         <View style={styles.loadingContainer}>
-                                            <MaterialIcons name="loop" size={30} color="gray" />
+                                            <Image source={images.close} size={30} color="red" />
                                         </View>
                                     ) : (
                                         <FlatList
