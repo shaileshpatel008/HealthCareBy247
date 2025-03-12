@@ -92,24 +92,29 @@ const PackageList = ({ navigation }) => {
              onPress={() => handlePress(item.id)}>
           <Image source={images.infoButton} style={styles.infobutton}/>
           </TouchableOpacity>
-        </View>
       </View>
-
-      {isItemInCart(item) ? (
-              <TouchableOpacity
-                style={[styles.addButton]}
-                onPress={() => removeFromCart(item)}
-                >
-                  <Text style={styles.addButtonText}>{"Remove"}</Text>
+      </View>
+        {isItemInCart(item) ? 
+        (
+          <View style={styles.buttonView}>
+                <TouchableOpacity
+                  style={[styles.addButton]}
+                  onPress={() => removeFromCart(item)}
+                  >
+                    <Text style={styles.addButtonText}>{"Remove"}</Text>
+                  </TouchableOpacity>
+          </View>
+        ) : (
+          <View style={styles.buttonView}>
+                <TouchableOpacity
+                  style={[styles.addButton]}
+                  onPress={() => addToCart(item)}
+                  >
+                  <Text style={styles.addButtonText}>{"Add"}</Text>
                 </TouchableOpacity>
-            ) : (
-              <TouchableOpacity
-                style={[styles.addButton]}
-                onPress={() => addToCart(item)}
-                >
-                <Text style={styles.addButtonText}>{"Add"}</Text>
-              </TouchableOpacity>
-            )}
+          </View>
+        )}
+      
     </View>
   );
 

@@ -35,9 +35,10 @@ const stylesMyCart = StyleSheet.create({
     flex: 1,
     padding: 8,
   },
-  clearText: {
+  removeCart: {
     width:22,
     height:22,
+    resizeMode:'cover',
   },
   listContainer: {
     paddingVertical: 16,
@@ -93,19 +94,18 @@ const stylesMyCart = StyleSheet.create({
     color:colors.primary
   },
   pricePkgSections:{
-    alignItems: 'left',
-    flexWrap:'wrap',
-    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: '80%',  
+    padding:3,
   },
   packageContainer: {
-    alignItems: 'left',
-    justifyContent: 'space-between',
-    borderWidth: 1,
+    width: '100%',  
+    borderWidth: 1,  
     borderColor: colors.primary,
-    borderRadius: 8,
-    padding: 16,
-    height:'90',
-    marginBottom: 8,
+    borderRadius: 10,  
+    padding: 10,  
+    marginVertical: 10,  
+    alignSelf: 'center', 
   },
   infobutton: {
     marginLeft:10,
@@ -117,6 +117,14 @@ const stylesMyCart = StyleSheet.create({
     fontSize: 14,
     textDecorationLine: 'line-through',
     color: colors.black,
+  },
+  buttonView:{
+    margin:3,
+    width: '20%',
+    justifyContent:'flex-end',
+  },
+  rightCartView:{
+    alignItems:'flex-end',
   },
   price: {
     fontSize: 16,
@@ -183,9 +191,9 @@ const stylesMyCart = StyleSheet.create({
     fontWeight: 'bold',
   },
   emptySections:{ 
-    height:"40%",
-    alignItems: 'center',
+    height:"60%",
     flexWrap:'wrap',
+    alignItems:'center',
     justifyContent: 'space-between',
     marginRight: 0,
   },

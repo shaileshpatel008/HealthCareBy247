@@ -43,20 +43,17 @@ const stylesTest = StyleSheet.create({
     paddingHorizontal: 16,
   },
   testContainer: {
-    flexDirection: 'row',
-    alignItems: 'left',
-    justifyContent: 'space-between',
-    borderWidth: 1,
+    width: '100%',  
+    borderWidth: 1,  
     borderColor: colors.primary,
-    borderRadius: 8,
-    padding: 16,
-    marginBottom: 8,
+    borderRadius: 10,  
+    padding: 10,  
+    marginVertical: 10,  
+    alignSelf: 'center', 
   },
   testName: {
-    flex: 1,
     color: colors.primary,
     flexWrap:'wrap',
-    width:'70%',
     fontSize: 16,
   },
   priceContainer: {
@@ -65,18 +62,20 @@ const stylesTest = StyleSheet.create({
     marginRight: 16,
   },
   priceSections:{
-    flex:7,
-    flexDirection: 'column',
-    alignItems: 'left',
-    flexWrap:'wrap',
-    justifyContent: 'space-between',
-    marginRight: 0,
+    alignItems: 'flex-start',
+    width: '70%',  
+    padding:3,
   },
   price: {
     fontSize: 18,
     color: colors.black,
     marginRight: 8,
   }, 
+  buttonView:{
+    margin:3,
+    width: '30%',  
+    alignItems:'flex-end',
+  },
   button: {
     flex:2,
     alignItems: 'center',  // Centers text horizontally
@@ -92,6 +91,7 @@ const stylesTest = StyleSheet.create({
     justifyContent:'center',
     backgroundColor: colors.primary,
   },
+
   removeButton: {
     backgroundColor: '#fff',
     borderWidth: 1,

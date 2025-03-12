@@ -12,10 +12,29 @@ const ContactUsScreen = ( { navigation }) => {
   const [branches, setBranches] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const handleCall = ({phoneNumber}) => {
-    const url = `tel:+91${phoneNumber}`;
-    Linking.openURL(url).catch((err) => Alert.alert('Error', 'Could not open dialer'));
+    Alert.alert(
+      "Are you sure?",
+      "Do you really want to do the call?",
+      [
+        {
+          text: "No",
+          onPress: () => console.log("Call canceled"),
+          style: "cancel",
+        },
+        { 
+          text: "Yes", 
+          onPress: () => {
+            const url = `tel:+91${phoneNumber}`;
+            Linking.openURL(url).catch((err) => Alert.alert('Error', 'Could not open dialer'));
+          }, 
+        },
+      ],
+      { cancelable: false }
+    );
   };
+  
   const toggleBranch = (branchId) => {
     console.log("Branch ID:",branchId);
     setExpandedBranch(expandedBranch === branchId ? null : branchId);

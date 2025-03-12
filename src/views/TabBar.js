@@ -63,14 +63,50 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
   const { config } = useConfig();
   const openWhatsApp = () => {
     // Open WhatsApp without changing the tab
-    const url = `https://wa.me/+91${config.WhatsAppNo}?text=Hello`;
-    Linking.openURL(url).catch(err => console.error('Error opening WhatsApp', err));
+    Alert.alert(
+      "Are you sure?",
+      "Do you really want to do the whatsapp?",
+      [
+        {
+          text: "No",
+          onPress: () => console.log("Call canceled"),
+          style: "cancel",
+        },
+        { 
+          text: "Yes", 
+          onPress: () => {
+            const url = `https://wa.me/+91${config.WhatsAppNo}?text=Hello`;
+            Linking.openURL(url).catch(err => console.error('Error opening WhatsApp', err));
+          }, 
+        },
+      ],
+      { cancelable: false }
+    );
+    
   };
   
   const makeCall = () => {
-    const phoneNumber = config.CallusNo.split('/')[0].trim();
-    const url = `tel:+91${phoneNumber}`;
-    Linking.openURL(url).catch(err => console.error('Error making call', err));
+    Alert.alert(
+      "Are you sure?",
+      "Do you really want to do the call?",
+      [
+        {
+          text: "No",
+          onPress: () => console.log("Call canceled"),
+          style: "cancel",
+        },
+        { 
+          text: "Yes", 
+          onPress: () => {
+            const phoneNumber = config.CallusNo.split('/')[0].trim();
+            const url = `tel:+91${phoneNumber}`;
+            Linking.openURL(url).catch(err => console.error('Error making call', err));
+          }, 
+        },
+      ],
+      { cancelable: false }
+    );
+    
   };
   const onPress = (route) => {
     if (route.name === 'WhatsApp') {

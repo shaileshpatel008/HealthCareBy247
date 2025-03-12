@@ -16,6 +16,7 @@ import { api } from '../utils/ApiService/api';
 import LoaderScreen from './LoaderScreen';
 import UploadPrescriptionScreen from './UploadPrescriptions';
 import { useCart } from '../context/CartContext';
+import { get } from 'react-native/Libraries/TurboModule/TurboModuleRegistry';
 
 const PlaceInquery = ({ navigation,route }) => {  
     const { state, dispatch} = useCart();
@@ -200,6 +201,7 @@ const PlaceInquery = ({ navigation,route }) => {
       fetchTimeSlot();
       fetchPackage();
       fetchReports();
+      getLocation();
     }, []);
 
       
@@ -264,12 +266,6 @@ const PlaceInquery = ({ navigation,route }) => {
       else if (mobilenumber.length != 10) {
         Alert.alert('Error', 'Please enter valid mobile number!');
       } 
-      else if (email.length < 10) {
-        Alert.alert('Error', 'Please enter valid email!');
-      } 
-      else if (!validateEmail(email)) {
-        Alert.alert('Error', 'Please enter valid email!');
-      } 
       else if (address_1.length < 5) {
         Alert.alert('Error', 'Please enter valid address!');
       } 
@@ -286,7 +282,11 @@ const PlaceInquery = ({ navigation,route }) => {
         Alert.alert('Error', 'Please select package or test or upload your prescriptions!');
       }
     else {
-      SubmitBookAVisitRequest();
+       if (email.length != 0 && !validateEmail(email)) {
+            Alert.alert('Error', 'Please enter valid email!');
+          } else{
+            SubmitBookAVisitRequest();
+          }
     }
   };
 
@@ -436,7 +436,7 @@ const PlaceInquery = ({ navigation,route }) => {
 
                 {/* Text Filed Mobile Number */}
                 <View style={[styles.sectionView,styles.columnStyle]}>
-                <Text style={[stylesFonts.semibold,styles.filedText]}>Email Address*</Text>
+                <Text style={[stylesFonts.semibold,styles.filedText]}>Email Address</Text>
                 <TextInput
                         style={styles.textFiled}
                         placeholder="Enter Email"
@@ -511,7 +511,7 @@ const PlaceInquery = ({ navigation,route }) => {
                           <TouchableOpacity style={[styles.textFiled,styles.centerTouchble]}
                             onPress={(OpenLocationPicker)}>
                             
-                      {(location)?  <Text style={[stylesFonts.semibold]}>Lat:{location.latitude} Long: {location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Current Location </Text> }
+                      {(location)?  <Text style={[stylesFonts.semibold]}>{location.latitude},{location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Current Location </Text> }
                  </TouchableOpacity>
                 </View>
 

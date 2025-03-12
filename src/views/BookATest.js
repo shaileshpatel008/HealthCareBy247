@@ -71,25 +71,29 @@ const TestList = ({ navigation }) => {
 
 
   const renderTests = ({ item }) => (
-    <View style={styles.testContainer}>
-            <View style={styles.priceSections}>
+    <View style={[styles.testContainer,common.rowStyle]}>
+            <View style={[styles.priceSections,common.columnStyle]}>
                 <Text style={[styles.testName, stylesFonts.semibold]}>{item.ReportName}</Text>
                 <Text style={[styles.price, stylesFonts.semibold]}>₹{item.ReportRate}</Text>
             </View>
             {isItemInCart(item) ? (
-              <TouchableOpacity
-                style={[styles.addButton]}
-                onPress={() => removeFromCart(item)}
-                >
-                  <Text style={styles.addButtonText}>{"Remove"}</Text>
-                </TouchableOpacity>
+              <View style={styles.buttonView}>
+                <TouchableOpacity
+                  style={[styles.addButton]}
+                  onPress={() => removeFromCart(item)}
+                  >
+                    <Text style={styles.addButtonText}>{"Remove"}</Text>
+                  </TouchableOpacity>
+                </View>
             ) : (
-              <TouchableOpacity
-                style={[styles.addButton]}
-                onPress={() => addToCart(item)}
-                >
-                <Text style={styles.addButtonText}>{"Add"}</Text>
-              </TouchableOpacity>
+              <View style={styles.buttonView}>
+                <TouchableOpacity
+                  style={[styles.addButton]}
+                  onPress={() => addToCart(item)}
+                  >
+                  <Text style={styles.addButtonText}>{"Add"}</Text>
+                </TouchableOpacity>
+              </View>
             )}
         </View>
   );

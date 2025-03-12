@@ -198,6 +198,7 @@ const BookAVisit = ({ navigation }) => {
       fetchTimeSlot();
       fetchPackage();
       fetchReports();
+      getLocation();
     }, []);
 
       
@@ -264,13 +265,6 @@ const BookAVisit = ({ navigation }) => {
         else if (mobilenumber.length != 10) {
           Alert.alert('Error', 'Please enter valid mobile number!');
         } 
-
-        else if (email.length < 10) {
-          Alert.alert('Error', 'Please enter valid email!');
-        } 
-        else if (!validateEmail(email)) {
-          Alert.alert('Error', 'Please enter valid email!');
-        } 
         else if (address_1.length < 5) {
           Alert.alert('Error', 'Please enter valid address!');
         } 
@@ -287,7 +281,11 @@ const BookAVisit = ({ navigation }) => {
           Alert.alert('Error', 'Please select package or test or upload your prescriptions!');
         }
         else {
-          SubmitBookAVisitRequest();
+          if (email.length != 0 && !validateEmail(email)) {
+            Alert.alert('Error', 'Please enter valid email!');
+          } else{
+            SubmitBookAVisitRequest();
+          }
         }
   };
   
@@ -454,7 +452,7 @@ const BookAVisit = ({ navigation }) => {
 
               {/* Text Filed Mobile Number */}
               <View style={[styles.sectionView,styles.columnStyle]}>
-                <Text style={[stylesFonts.semibold,styles.filedText]}>Email Address*</Text>
+                <Text style={[stylesFonts.semibold,styles.filedText]}>Email Address</Text>
                 <TextInput
                         style={styles.textFiled}
                         placeholder="Enter Email"
@@ -529,7 +527,7 @@ const BookAVisit = ({ navigation }) => {
                 <TouchableOpacity style={[styles.textFiled,styles.centerTouchble]}
                   onPress={(OpenLocationPicker)}>
                    
-                      {(location)?  <Text style={[stylesFonts.semibold]}>Lat:{location.latitude} Long: {location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Current Location </Text> }
+                      {(location)?  <Text style={[stylesFonts.semibold]}>{location.latitude},{location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Current Location </Text> }
                  </TouchableOpacity>
                 </View>
 

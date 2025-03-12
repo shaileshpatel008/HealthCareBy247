@@ -172,8 +172,8 @@ const HomeScreen = ({ navigation }) => {
           }}
         />
         </View>
-
-        <View>
+      <View>
+        
     <SubmitPrescriptions
         visible={modalSubmit}
         imageUri={imageUri}

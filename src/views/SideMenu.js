@@ -2,6 +2,7 @@ import React from "react";
 import { CommonActions } from "@react-navigation/native";
 import { View, Text, Image, TouchableOpacity ,Linking} from "react-native";
 import { DrawerContentScrollView } from "@react-navigation/drawer";
+import { SafeAreaView } from 'react-native-safe-area-context';
 import images from "../utils/images";
 import style from "../styles/stylesSideMenuScreen";
 import styleFont from "../styles/styleFonts";
@@ -22,6 +23,7 @@ const SideMenuScreen = (props) => {
   };
   
   return (
+    <SafeAreaView style={{ flex: 1 }}>
     <View style={style.container}>
       {/* Header Section */}
       <View style={style.header}>
@@ -87,6 +89,7 @@ const SideMenuScreen = (props) => {
         </DrawerContentScrollView>
       </View>
     </View>
+    </SafeAreaView>
   );
 };
 

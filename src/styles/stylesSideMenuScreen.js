@@ -8,13 +8,14 @@ const stylesSideMenuScreen = StyleSheet.create({
     backgroundColor: colors.white,
   },
   sideMenuDrawerView: {
-    paddingTop: 0, marginTop: 0, padding: 0, margin: 0, flexGrow: 1
+    flexGrow: 1,
+    paddingTop: 0, marginTop: 0, padding: 0, margin: 0, 
   },
   logo:{
     width:100,
     height:130,
     resizeMode: 'contain',
-    marginBottom:0,
+    marginTop:24,
   },
   labName:{
     fontSize: 16,
@@ -25,7 +26,7 @@ const stylesSideMenuScreen = StyleSheet.create({
     color: colors.primary,
   },
   header: {
-    marginTop: 45,
+    marginTop: 5,
     marginLeft: 20,
     marginRight: 20,
     marginBottom:10,
@@ -40,12 +41,16 @@ const stylesSideMenuScreen = StyleSheet.create({
   background: {
     width: "100%",
     height: "90%",
+    flex:1,
     backgroundColor: colors.primary,
   },
   menuItems: {
+    flexGrow: 1,
+    paddingVertical: 10,
     marginTop: 0,
   },
   viewItem: {
+    flexGrow:1,
     flexDirection: 'column',
     alignItems: 'left',
   },

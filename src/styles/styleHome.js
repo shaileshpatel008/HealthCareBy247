@@ -37,6 +37,7 @@ const stylesHomeScreen = StyleSheet.create({
       flexWrap: 'wrap',
       justifyContent: 'space-between',
       padding: 33,
+      paddingBottom:84,
     },
     gridItem: {
       borderColor:"#3E409560",

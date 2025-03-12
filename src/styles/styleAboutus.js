@@ -22,13 +22,13 @@ containerView:{
 sectionView:{
     alignItems:'center',
     paddingTop:'0',
-    paddingBottom:'10',
+    paddingBottom:'4',
   },
-  headerTitle:{
-    alignItems:'left', 
-    paddingHorizontal:10,
-    paddingVertical: 20,
-  },
+//   headerTitle:{    
+//     alignItems:'left', 
+//     paddingHorizontal:10,
+//     paddingVertical: 20,
+//   },
 logoView:{
     width:160,
     height:160,
@@ -42,10 +42,11 @@ columnStyle:{
     flexDirection: 'column',
 },
 space:{
-    paddingBottom:10,
+    paddingBottom:0,
 },
 space8:{
-    paddingBottom:10,
+    marginTop:4,
+    paddingBottom:4,
 },
 header: {
     flexDirection: 'row',
@@ -62,17 +63,23 @@ textLab:{
 
 textDr:{
     color:colors.black,
-    fontSize:16,
+    fontSize:14,
+    marginTop:4,
    },
+textDesc:{
+  color:colors.black,
+  fontSize:14,
+},
 headerIcon: {
     width: 30,
     height: 30,
     marginBottom: 10,
 },
 headerTitle: {
+    justifyContent:'center',
+    alignSelf:'flex-start',
     fontSize: 18,
     color: colors.white,
-    marginBottom: 15,
 },
 });
 

@@ -54,22 +54,25 @@ const MyCartView = ({ navigation }) => {
   const renderTests = ({ item }) => {
       if (item.ReportNo) {
       return (
-        <View style={styles.testContainer}>
-                <View style={styles.priceSections}>
+        <View style={[styles.packageContainer,common.rowStyle]}>
+                <View style={[styles.pricePkgSections,common.columnStyle]}>
                     <Text style={[styles.packageName, stylesFonts.semibold]} >{item.ReportName}</Text>
                     <Text style={[styles.price, stylesFonts.semibold]}>₹{item.ReportRate}</Text>
                 </View>
-                  <TouchableOpacity
-                    style={[styles.addButton]}
-                    onPress={() => {
-                           setModalVisible(true)
-                           setRemovedItem(item);
-                          console.log("Modal:",modalVisible);
-                      }
-                    }//removePackageFromCart(item)
-                    >
-                      <Text style={styles.addButtonText}>{"Remove"}</Text>
+                <View style={styles.buttonView}>
+                    <TouchableOpacity
+                    style={styles.rightCartView}
+                          onPress={() =>
+                            {
+                              setModalVisible(true)
+                              setRemovedItem(item);
+                              console.log("Modal:",modalVisible);
+                            }
+                          }
+                          >
+                      <Image source={images.removeCart} style={styles.removeCart}/>
                     </TouchableOpacity>
+              </View>
             </View>
       )}
         else if (item.PackageId) {
@@ -81,24 +84,22 @@ const MyCartView = ({ navigation }) => {
               <View style={[styles.priceContainer,common.rowStyle]}>
                   <Text style={[styles.price,stylesFonts.semibold]}>₹{item.DiscountRate}</Text>
                   <Text style={[styles.originalPrice,stylesFonts.semibold]}>₹{item.RoutingRate}</Text>
-                  {/* <TouchableOpacity
-                     onPress={() => handlePress(item.id)}>
-                  <Image source={images.infoButton} style={styles.infobutton}/>
-                  </TouchableOpacity> */}
                 </View>
               </View>
+              <View style={styles.buttonView}>
               <TouchableOpacity
-                    style={[styles.addButton]}
+              style={styles.rightCartView}
                     onPress={() =>
                       {
                         setModalVisible(true)
                         setRemovedItem(item);
                         console.log("Modal:",modalVisible);
                       }
-                    }// removePackageFromPackage(item)
+                    }
                     >
-                      <Text style={styles.addButtonText}>{"Remove"}</Text>
+                      <Image source={images.removeCart} style={styles.removeCart}/>
                     </TouchableOpacity>
+              </View>
             </View>
           );
         }
@@ -118,10 +119,9 @@ const MyCartView = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       {state.items.length === 0 ? (
-          <View style={styles.emptyCart}>
+          <View style={[common.columnStyle,styles.emptyCart]}>
             <View style={[common.columnStyle,styles.emptySections]}>
             <Image source={images.cartEmpty} style={styles.imageEmptyCart} resizeMode="cover" />
-            {/* testName */}
             <Text style={styles.testName}>Select a package/test to continue.</Text>
             </View>
           </View>

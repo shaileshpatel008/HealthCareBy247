@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import colors from '../utils/colors';
+import { red } from 'react-native-reanimated/lib/typescript/Colors';
 
 const stylesPackage = StyleSheet.create({
 
@@ -14,9 +15,8 @@ const stylesPackage = StyleSheet.create({
   },
   infobutton: {
     marginLeft:10,
-    width:30,
-    height:30,
-    padding:5,
+    width:15,
+    height:15,
   },
   searchContainer: {
     flexDirection: 'row',
@@ -46,29 +46,25 @@ const stylesPackage = StyleSheet.create({
     paddingHorizontal: 16,
   },
   packageContainer: {
-    alignItems: 'left',
-    justifyContent: 'space-between',
-    borderWidth: 1,
+    width: '100%',  
+    borderWidth: 1,  
     borderColor: colors.primary,
-    borderRadius: 8,
-    padding: 16,
-    height:'90',
-    marginBottom: 8,
+    borderRadius: 10,  
+    padding: 10,  
+    marginVertical: 10,  
+    alignSelf: 'center', 
   },
   packageName: {
-    flex: 1,
     fontSize: 16,
     color:colors.primary
   },
   priceContainer: {
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-
+    alignItems: 'flex-start',
   },
   priceSections:{
-    alignItems: 'left',
-    flexWrap:'wrap',
-    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    width: '70%',  
+    padding:3,
   },
   price: {
     fontSize: 16,
@@ -93,6 +89,11 @@ const stylesPackage = StyleSheet.create({
     borderRadius:4,
     justifyContent:'center',
     backgroundColor: colors.primary,
+  },
+  buttonView:{
+    margin:3,
+    width: '30%',  
+    alignItems:'flex-end',
   },
   addButtonText: {
     color: colors.white,
