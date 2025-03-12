@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Image,Linking,View,TouchableOpacity } from "react-native";
+import { Image,Linking,View,TouchableOpacity,Alert } from "react-native";
 import { Text } from "react-native-gesture-handler";
 import {  SafeAreaView } from 'react-native-safe-area-context';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';

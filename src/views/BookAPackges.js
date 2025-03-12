@@ -17,13 +17,14 @@ const PackageList = ({ navigation }) => {
   const [packagesList, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+  const [infoPackage, setInfoPackage] = useState(null);
 
   const filteredPackages = packagesList.filter((pkg) =>
-    pkg.Name.toLowerCase().includes(searchText.toLowerCase())
+    pkg.Title.toLowerCase().includes(searchText.toLowerCase())
   );
 
-  const handlePress = (id) => {
+  const handlePress = (obj) => {
+    setInfoPackage(obj)
     setModalVisible(true)
   };
   const closeModal = () => {
@@ -89,7 +90,7 @@ const PackageList = ({ navigation }) => {
           <Text style={[styles.price,stylesFonts.semibold]}>₹{item.DiscountRate}</Text>
           <Text style={[styles.originalPrice,stylesFonts.semibold]}>₹{item.RoutingRate}</Text>
           <TouchableOpacity
-             onPress={() => handlePress(item.id)}>
+             onPress={() => handlePress(item)}>
           <Image source={images.infoButton} style={styles.infobutton}/>
           </TouchableOpacity>
       </View>
@@ -140,24 +141,30 @@ const PackageList = ({ navigation }) => {
           onChangeText={setSearchText}
         />
         <TouchableOpacity onPress={() => setSearchText('')}>
-          <Image source={images.searchButton} style={styles.clearText} />
+          <Image source={images.clearText} style={styles.clearText} />
         </TouchableOpacity>
       </View>
-
-      <FlatList
+      {filteredPackages.length === 0 ? (
+          <View style={[common.columnStyle,styles.emptyView]}>
+            <View style={[common.columnStyle,styles.emptySections]}>
+            <Text style={styles.testName}>No found Packages.</Text>
+            </View>
+          </View>
+      ) : (
+        <FlatList
         data={filteredPackages}
         keyExtractor={(item) => item.PackageId.toString()}
         renderItem={renderPackage}
         contentContainerStyle={styles.listContainer}
-      />
-      
+          /> 
+      )}      
     </View>
     <Modal
         animationType="slide" // or "fade", "none"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {closeModal}}>
-        <PackagesDetailsScreen onClose={closeModal}/>
+        <PackagesDetailsScreen  packageInfo={infoPackage} onClose={closeModal}/>
       </Modal>
     </SafeAreaView>
   );

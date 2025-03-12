@@ -12,6 +12,7 @@ searchButton: require('../assets/search.png'),
 infoButton: require('../assets/infoButton.png'),
 menuClose: require('../assets/Menu_Close.png'),
 removeCart: require('../assets/remove_cart.png'),
+clearText: require('../assets/clear_text.png'),
 
 
 branchIcon: require('../assets/branch_icon.png'),

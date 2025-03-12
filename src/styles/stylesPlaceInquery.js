@@ -26,7 +26,10 @@ const stylesBookAVisit = StyleSheet.create({
     color: colors.white,
   },
   containerView:{
-    padding: 15,
+    paddingTop:5,
+    paddingEnd:15,
+    paddingLeft:15,
+    paddingRight:15,
   },
   rowStyle:{
     flexDirection: 'row',

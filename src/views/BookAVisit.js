@@ -527,7 +527,7 @@ const BookAVisit = ({ navigation }) => {
                 <TouchableOpacity style={[styles.textFiled,styles.centerTouchble]}
                   onPress={(OpenLocationPicker)}>
                    
-                      {(location)?  <Text style={[stylesFonts.semibold]}>{location.latitude},{location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Current Location </Text> }
+                      {(location)?  <Text style={[stylesFonts.semibold]}>{location.latitude},{location.longitude}</Text> : <Text style={[stylesFonts.semibold]}> Get Latitude & Longitude </Text> }
                  </TouchableOpacity>
                 </View>
 

@@ -15,7 +15,7 @@ const RemoveItemModal = ({ visible, onClose, onConfirm }) => {
       <View style={styles.modalContent}>
         <Text style={styles.title}>Healthcare 24x7</Text>
         <Text style={styles.message}>
-          Do you want to remove this item from your cart?
+          Do you want to remove this test/package from your cart?
         </Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={[styles.button, styles.yesButton]} onPress={onConfirm}>

@@ -13,8 +13,8 @@ const stylePackageDetails = StyleSheet.create({
       justifyContent: 'space-between',
       backgroundColor: colors.white,
       paddingHorizontal: 15,
-      paddingVertical: 10,
-      height:65,
+      paddingVertical: 0,
+      height:45,
     },
     background: {
         borderRadius:12,
@@ -28,8 +28,8 @@ const stylePackageDetails = StyleSheet.create({
       fontSize: 18,
     },
     headerIcon:{
-      width: 24,
-      height: 24,
+      width: 16,
+      height: 16,
       resizeMode:'contain',
     },
     doneButton: {
@@ -52,6 +52,11 @@ const stylePackageDetails = StyleSheet.create({
     packageText: {
       fontSize: 16,
     },
+    testTitle: {
+      fontSize: 16,
+      color: colors.primary,
+      marginLeft: 10,
+    },
     packageDetailsName: {
         fontSize: 16,
         fontWeight: 'normal',
@@ -68,6 +73,20 @@ const stylePackageDetails = StyleSheet.create({
       listContainer: {
         paddingHorizontal: 16,
         paddingVertical: 16,
+      },
+      emptyView: {
+        flex: 1,
+        alignContent:'center',
+        justifyContent: 'center', // Center vertically
+        alignItems: 'center', // Center horizontally
+        padding: 20,
+      },
+      emptySections:{ 
+        height:"60%",
+        flexWrap:'wrap',
+        alignItems:'center',
+        justifyContent: 'space-between',
+        marginRight: 0,
       },
   });
   export default stylePackageDetails;

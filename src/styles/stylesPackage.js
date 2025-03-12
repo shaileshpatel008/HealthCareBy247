@@ -30,7 +30,7 @@ const stylesPackage = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
-    padding: 8,
+    padding: 0,
   },
   clearText: {
     width:22,
@@ -44,6 +44,20 @@ const stylesPackage = StyleSheet.create({
   },
   listContainer: {
     paddingHorizontal: 16,
+  },
+  emptyView: {
+    flex: 1,
+    alignContent:'center',
+    justifyContent: 'center', // Center vertically
+    alignItems: 'center', // Center horizontally
+    padding: 20,
+  },
+  emptySections:{ 
+    height:"60%",
+    flexWrap:'wrap',
+    alignItems:'center',
+    justifyContent: 'space-between',
+    marginRight: 0,
   },
   packageContainer: {
     width: '100%',  
@@ -59,7 +73,8 @@ const stylesPackage = StyleSheet.create({
     color:colors.primary
   },
   priceContainer: {
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    justifyContent:'flex-start'
   },
   priceSections:{
     alignItems: 'flex-start',
@@ -97,7 +112,7 @@ const stylesPackage = StyleSheet.create({
   },
   addButtonText: {
     color: colors.white,
-    fontSize:12,
+    fontSize:14,
     fontWeight: 'bold',
     textAlign: 'center',
   },

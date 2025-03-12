@@ -115,21 +115,30 @@ const TestList = ({ navigation }) => {
       <View style={styles.searchContainer}>
         <TextInput
           style={styles.searchInput}
-          placeholder="Search Package"
+          placeholder="Search Test"
           value={searchText}
           onChangeText={setSearchText}
         />
         <TouchableOpacity onPress={() => setSearchText('')}>
-          <Image source={images.searchButton} style={styles.clearText} />
+          <Image source={images.clearText} style={styles.clearText} />
         </TouchableOpacity>
       </View>
-
-      <FlatList
-        data={filteredTests}
-        keyExtractor={(item) => item.ReportNo.toString()}
-        renderItem={renderTests}
-        contentContainerStyle={styles.listContainer}
+      
+      {filteredTests.length === 0 ? (
+          <View style={[common.columnStyle,styles.emptyView]}>
+            <View style={[common.columnStyle,styles.emptySections]}>
+            <Text style={styles.testName}>No found Tests.</Text>
+            </View>
+          </View>
+      ) : (
+        <FlatList
+          data={filteredTests}
+          keyExtractor={(item) => item.ReportNo.toString()}
+          renderItem={renderTests}
+          contentContainerStyle={styles.listContainer}
       />
+      )}     
+   
       
     </View>
     </SafeAreaView>
