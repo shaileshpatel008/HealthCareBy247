@@ -73,13 +73,17 @@ textDesc:{
 headerIcon: {
     width: 30,
     height: 30,
-    marginBottom: 10,
+    // marginBottom: 10,
 },
 headerTitle: {
     justifyContent:'center',
-    alignSelf:'flex-start',
+    // alignSelf:'flex-start',
     fontSize: 18,
     color: colors.white,
+},
+webview: {
+    flex: 1,
+    height:"100%",
 },
 });
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, View, Text, TouchableOpacity,FlatList,SafeAreaView } from 'react-native';
+import { Image, View, Text, TouchableOpacity, FlatList, SafeAreaView } from 'react-native';
 import packageDetailsStyle from '../styles/stylePackageDetails';
 import images from '../utils/images';
 import common from '../styles/commonStyle';
@@ -28,30 +28,29 @@ const PackagesDetailsScreen = ({ packageInfo, onClose }) => {
 
   return (
     <SafeAreaView style={packageDetailsStyle.container}>
-        <View style={packageDetailsStyle.background }>
-          <View style={packageDetailsStyle.header}>
-            <Text style={packageDetailsStyle.headerText}>{packageInfo.Title}</Text>
-            <TouchableOpacity onPress={() => onClose()} style={packageDetailsStyle.doneButton}>
-              <Image source={images.menuClose} style={stylePackageDetails.headerIcon}/>
-             </TouchableOpacity> 
-           </View>
-           <Text style={packageDetailsStyle.testTitle}>Following tests ate including in this pacakge.</Text>
-           {packageInfo.Tests.length === 0 ? (
-                <View style={[common.columnStyle,stylePackageDetails.emptyView]}>
-                  <View style={[common.columnStyle,stylePackageDetails.emptySections]}>
-                  <Text style={stylePackageDetails.packageDetailsName}>No found Tests.</Text>
-                  </View>
-                </View>
-            ) : (
-              <FlatList
-                  data={packageInfo.Tests}
-                  keyExtractor={(item, index) => index.toString()} 
-                  renderItem={renderPackage}
-                  contentContainerStyle={packageDetailsStyle.listContainer}
-              />
-            )}    
-          
+      <View style={packageDetailsStyle.background}>
+        <View style={packageDetailsStyle.header}>
+          <Text style={packageDetailsStyle.headerText}>{packageInfo.Title}</Text>
+          <TouchableOpacity onPress={() => onClose()} style={packageDetailsStyle.doneButton}>
+            <Image source={images.menuClose} style={stylePackageDetails.headerIcon} />
+          </TouchableOpacity>
         </View>
+        <Text style={packageDetailsStyle.testTitle}>Following tests are including in this pacakge.</Text>
+        {packageInfo.Tests.length === 0 ? (
+          <View style={[common.columnStyle, stylePackageDetails.emptyView]}>
+            <View style={[common.columnStyle, stylePackageDetails.emptySections]}>
+              <Text style={stylePackageDetails.packageDetailsName}>No test found</Text>
+            </View>
+          </View>
+        ) : (
+          <FlatList
+            data={packageInfo.Tests}
+            keyExtractor={(item, index) => index.toString()}
+            renderItem={renderPackage}
+            contentContainerStyle={packageDetailsStyle.listContainer}
+          />
+        )}
+      </View>
     </SafeAreaView>
   );
 };

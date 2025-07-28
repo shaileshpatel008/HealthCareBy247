@@ -27,13 +27,15 @@ const stylesTest = StyleSheet.create({
     margin: 16,
     borderWidth: 1,
     borderColor: colors.primaryBorder,
-    height:46,
+    // height:46,
     borderRadius: 5,
     paddingHorizontal: 16,
   },
   searchInput: {
     flex: 1,
+    height:46,
     padding: 0,
+    
   },
   clearText: {
     width:22,
@@ -84,13 +86,62 @@ const stylesTest = StyleSheet.create({
     borderRadius: 11,
     height:22,
   },
+  // addButton: {
+  //   width:90,
+  //   height:45,
+  //   borderRadius:4,
+  //   justifyContent:'center',
+  //   backgroundColor: colors.primary,
+  // },
+  // addButton: {
+  //   width: 80,
+  //   height: 35,
+  //   borderRadius: 12, // Fully rounded edges
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor: colors.primary,
+  // },  
+  // addButton: {
+  //   width: 80,
+  //   height: 45,
+  //   borderRadius: 8,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor: colors.primary,
+  //   borderWidth: 2,
+  //   borderColor: colors.white, // White border
+  // },
+  // addButton: {
+  //   width: 90,
+  //   height: 45,
+  //   borderRadius: 25, // Smooth pill shape
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor: colors.primary,
+  // },  
+  // addButton: {
+  //   width: 100,
+  //   height: 45,
+  //   borderRadius: 10,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor: colors.primary,
+  //   borderWidth: 1,
+  //   borderColor: 'rgba(255, 255, 255, 0.3)',
+  // },    
   addButton: {
-    width:90,
-    height:45,
-    borderRadius:4,
-    justifyContent:'center',
+    width: 90,
+    height: 45,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: colors.primary,
-  },
+    shadowColor: '#000',
+    shadowOffset: { width: 3, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+    elevation: 6,
+  },  
   emptyView: {
     flex: 1,
     alignContent:'center',
@@ -122,12 +173,12 @@ const stylesTest = StyleSheet.create({
  headerIcon: {
     width: 35,
     height: 35,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   headerTitle: {
     fontSize: 18,
     color: '#fff',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
   },
 });
 

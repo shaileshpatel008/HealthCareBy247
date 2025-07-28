@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Modal as RNModal } from 'react-native';
 
 const CallUsScreen = ({ navigation }) => {
     const [isModalVisible, setModalVisible] = useState(true);
@@ -11,12 +11,12 @@ const CallUsScreen = ({ navigation }) => {
   
     return (
       <View style={styles.screen}>
-        <Modal isVisible={isModalVisible}>
+        <RNModal isVisible={isModalVisible}>
           <View style={styles.modalContent}>
             <Text style={styles.modalText}>Call Us Popup</Text>
             <Button title="Dismiss" onPress={closeModal} />
           </View>
-        </Modal>
+        </RNModal>
       </View>
     );
   };

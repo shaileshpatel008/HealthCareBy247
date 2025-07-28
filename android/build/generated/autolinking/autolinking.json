@@ -1,26 +1,26 @@
 {
-  "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247",
-  "reactNativePath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native",
+  "root": "/Users/meet/Desktop/Meet/healthcareby__247",
+  "reactNativePath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native",
   "reactNativeVersion": "0.78",
   "dependencies": {
     "@react-native-async-storage/async-storage": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-async-storage/async-storage",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-async-storage/async-storage",
       "name": "@react-native-async-storage/async-storage",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec",
           "version": "2.1.2",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-async-storage/async-storage/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-async-storage/async-storage/android",
           "packageImportPath": "import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;",
           "packageInstance": "new AsyncStoragePackage()",
           "buildTypes": [],
           "libraryName": "rnasyncstorage",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -29,23 +29,47 @@
       }
     },
     "@react-native-community/geolocation": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-community/geolocation",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/geolocation",
       "name": "@react-native-community/geolocation",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-community/geolocation/react-native-geolocation.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/geolocation/react-native-geolocation.podspec",
           "version": "3.4.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-community/geolocation/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/geolocation/android",
           "packageImportPath": "import com.reactnativecommunity.geolocation.GeolocationPackage;",
           "packageInstance": "new GeolocationPackage()",
           "buildTypes": [],
           "libraryName": "RNCGeolocationSpec",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/@react-native-community/geolocation/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/geolocation/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "@react-native-community/netinfo": {
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/netinfo",
+      "name": "@react-native-community/netinfo",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/netinfo/react-native-netinfo.podspec",
+          "version": "11.4.1",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/netinfo/android",
+          "packageImportPath": "import com.reactnativecommunity.netinfo.NetInfoPackage;",
+          "packageInstance": "new NetInfoPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/@react-native-community/netinfo/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -54,17 +78,17 @@
       }
     },
     "react-native-date-picker": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-date-picker",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-date-picker",
       "name": "react-native-date-picker",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-date-picker/react-native-date-picker.podspec",
-          "version": "5.0.10",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-date-picker/react-native-date-picker.podspec",
+          "version": "5.0.11",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-date-picker/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-date-picker/android",
           "packageImportPath": "import com.henninghall.date_picker.DatePickerPackage;",
           "packageInstance": "new DatePickerPackage()",
           "buildTypes": [],
@@ -72,7 +96,31 @@
           "componentDescriptors": [
             "RNDatePickerComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-date-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-device-info": {
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-device-info",
+      "name": "react-native-device-info",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-device-info/RNDeviceInfo.podspec",
+          "version": "14.0.4",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-device-info/android",
+          "packageImportPath": "import com.learnium.RNDeviceInfo.RNDeviceInfo;",
+          "packageInstance": "new RNDeviceInfo()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-device-info/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -81,17 +129,17 @@
       }
     },
     "react-native-gesture-handler": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-gesture-handler",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-gesture-handler",
       "name": "react-native-gesture-handler",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-gesture-handler/RNGestureHandler.podspec",
-          "version": "2.24.0",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-gesture-handler/RNGestureHandler.podspec",
+          "version": "2.25.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-gesture-handler/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-gesture-handler/android",
           "packageImportPath": "import com.swmansion.gesturehandler.RNGestureHandlerPackage;",
           "packageInstance": "new RNGestureHandlerPackage()",
           "buildTypes": [],
@@ -100,7 +148,31 @@
             "RNGestureHandlerButtonComponentDescriptor",
             "RNGestureHandlerRootViewComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-image-crop-picker": {
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-crop-picker",
+      "name": "react-native-image-crop-picker",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-crop-picker/RNImageCropPicker.podspec",
+          "version": "0.42.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-crop-picker/android",
+          "packageImportPath": "import com.reactnative.ivpusic.imagepicker.PickerPackage;",
+          "packageInstance": "new PickerPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-crop-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -109,23 +181,23 @@
       }
     },
     "react-native-image-picker": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-image-picker",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-picker",
       "name": "react-native-image-picker",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-image-picker/react-native-image-picker.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-picker/react-native-image-picker.podspec",
           "version": "8.2.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-image-picker/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-picker/android",
           "packageImportPath": "import com.imagepicker.ImagePickerPackage;",
           "packageInstance": "new ImagePickerPackage()",
           "buildTypes": [],
           "libraryName": "RNImagePickerSpec",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-image-picker/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -134,22 +206,22 @@
       }
     },
     "react-native-maps": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-maps",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-maps",
       "name": "react-native-maps",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-maps/react-native-maps.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-maps/react-native-maps.podspec",
           "version": "1.20.1",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-maps/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-maps/android",
           "packageImportPath": "import com.rnmaps.maps.MapsPackage;",
           "packageInstance": "new MapsPackage()",
           "buildTypes": [],
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-maps/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-maps/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -158,23 +230,23 @@
       }
     },
     "react-native-permissions": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-permissions",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-permissions",
       "name": "react-native-permissions",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-permissions/RNPermissions.podspec",
-          "version": "5.2.6",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-permissions/RNPermissions.podspec",
+          "version": "5.3.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-permissions/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-permissions/android",
           "packageImportPath": "import com.zoontek.rnpermissions.RNPermissionsPackage;",
           "packageInstance": "new RNPermissionsPackage()",
           "buildTypes": [],
           "libraryName": "RNPermissionsSpec",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -183,23 +255,23 @@
       }
     },
     "react-native-reanimated": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-reanimated",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-reanimated",
       "name": "react-native-reanimated",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-reanimated/RNReanimated.podspec",
-          "version": "3.17.1",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-reanimated/RNReanimated.podspec",
+          "version": "3.17.2",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-reanimated/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-reanimated/android",
           "packageImportPath": "import com.swmansion.reanimated.ReanimatedPackage;",
           "packageInstance": "new ReanimatedPackage()",
           "buildTypes": [],
           "libraryName": "rnreanimated",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -208,17 +280,17 @@
       }
     },
     "react-native-safe-area-context": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-safe-area-context",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-safe-area-context",
       "name": "react-native-safe-area-context",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-safe-area-context/react-native-safe-area-context.podspec",
           "version": "5.3.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-safe-area-context/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-safe-area-context/android",
           "packageImportPath": "import com.th3rdwave.safeareacontext.SafeAreaContextPackage;",
           "packageInstance": "new SafeAreaContextPackage()",
           "buildTypes": [],
@@ -227,7 +299,7 @@
             "RNCSafeAreaProviderComponentDescriptor",
             "RNCSafeAreaViewComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -236,17 +308,17 @@
       }
     },
     "react-native-screens": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-screens",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-screens",
       "name": "react-native-screens",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-screens/RNScreens.podspec",
-          "version": "4.9.1",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-screens/RNScreens.podspec",
+          "version": "4.10.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-screens/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-screens/android",
           "packageImportPath": "import com.swmansion.rnscreens.RNScreensPackage;",
           "packageInstance": "new RNScreensPackage()",
           "buildTypes": [],
@@ -264,7 +336,7 @@
             "RNSScreenContentWrapperComponentDescriptor",
             "RNSModalScreenComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -273,11 +345,11 @@
       }
     },
     "react-native-simple-toast": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-simple-toast",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-simple-toast",
       "name": "react-native-simple-toast",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-simple-toast/react-native-simple-toast.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-simple-toast/react-native-simple-toast.podspec",
           "version": "3.3.2",
           "configurations": [],
           "scriptPhases": []
@@ -286,23 +358,47 @@
       }
     },
     "react-native-vector-icons": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-vector-icons",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-vector-icons",
       "name": "react-native-vector-icons",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-vector-icons/RNVectorIcons.podspec",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-vector-icons/RNVectorIcons.podspec",
           "version": "10.2.0",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-vector-icons/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-vector-icons/android",
           "packageImportPath": "import com.oblador.vectoricons.VectorIconsPackage;",
           "packageInstance": "new VectorIconsPackage()",
           "buildTypes": [],
           "libraryName": "RNVectorIconsSpec",
           "componentDescriptors": [],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
+    "react-native-version-check": {
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-version-check",
+      "name": "react-native-version-check",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-version-check/react-native-version-check.podspec",
+          "version": "3.4.7",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": {
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-version-check/android",
+          "packageImportPath": "import io.xogus.reactnative.versioncheck.RNVersionCheckPackage;",
+          "packageInstance": "new RNVersionCheckPackage()",
+          "buildTypes": [],
+          "componentDescriptors": [],
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-version-check/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -311,17 +407,17 @@
       }
     },
     "react-native-webview": {
-      "root": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-webview",
+      "root": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-webview",
       "name": "react-native-webview",
       "platforms": {
         "ios": {
-          "podspecPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-webview/react-native-webview.podspec",
-          "version": "13.13.2",
+          "podspecPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-webview/react-native-webview.podspec",
+          "version": "13.13.5",
           "configurations": [],
           "scriptPhases": []
         },
         "android": {
-          "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-webview/android",
+          "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-webview/android",
           "packageImportPath": "import com.reactnativecommunity.webview.RNCWebViewPackage;",
           "packageInstance": "new RNCWebViewPackage()",
           "buildTypes": [],
@@ -329,7 +425,7 @@
           "componentDescriptors": [
             "RNCWebViewComponentDescriptor"
           ],
-          "cmakeListsPath": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cmakeListsPath": "/Users/meet/Desktop/Meet/healthcareby__247/node_modules/react-native-webview/android/build/generated/source/codegen/jni/CMakeLists.txt",
           "cxxModuleCMakeListsModuleName": null,
           "cxxModuleCMakeListsPath": null,
           "cxxModuleHeaderName": null,
@@ -500,7 +596,7 @@
         {
           "name": "--path <path>",
           "description": "Path to the React Native project root.",
-          "default": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247"
+          "default": "/Users/meet/Desktop/Meet/healthcareby__247"
         },
         {
           "name": "--platform <string>",
@@ -790,11 +886,11 @@
     "android": {}
   },
   "assets": [
-    "./assets/fonts/"
+    "./src/assets/fonts/"
   ],
   "project": {
     "ios": {
-      "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/ios",
+      "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/ios",
       "xcodeProject": {
         "name": "HealthCareLab.xcworkspace",
         "path": ".",
@@ -803,7 +899,7 @@
       "assets": []
     },
     "android": {
-      "sourceDir": "/Users/monangchampaneri/Desktop/BCreative/healthcareby247/android",
+      "sourceDir": "/Users/meet/Desktop/Meet/healthcareby__247/android",
       "appName": "app",
       "packageName": "com.healthcarelab",
       "applicationId": "com.healthcarelab",

@@ -1,48 +1,54 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Modal as RNModal } from "react-native"; // Import Modal as RNModal
 import colors from "../utils/colors";
-import Modal from 'react-native-modal';
 
 const RemoveItemModal = ({ visible, onClose, onConfirm }) => {
   return (
-    <Modal 
-            isVisible={visible} 
-            style={{ margin: 0 }} // Full screen
-            backdropOpacity={0.4} 
-            onBackButtonPress={onClose} 
-          >
-      <View style={styles.modalContainer}>
-      <View style={styles.modalContent}>
-        <Text style={styles.title}>Healthcare 24x7</Text>
-        <Text style={styles.message}>
-          Do you want to remove this test/package from your cart?
-        </Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={[styles.button, styles.yesButton]} onPress={onConfirm}>
-            <Text style={styles.yesText}>Yes</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.noButton]} onPress={onClose}>
-            <Text style={styles.noText}>No</Text>
-          </TouchableOpacity>
+    <RNModal
+      visible={visible} // Use 'visible' instead of 'isVisible'
+      style={{ margin: 0 }} // Full screen
+      transparent={true} // Enable transparency for backdrop effect
+      animationType="fade" // Simple fade animation
+      onRequestClose={onClose} // Triggered on hardware back press
+    >
+      <TouchableOpacity
+        style={styles.modalContainer}
+        activeOpacity={1} // Prevents visual feedback on press
+        onPress={onClose} // Close modal when tapping outside
+      >
+        <View style={styles.modalContent}>
+          <Text style={styles.title}>Healthcare 24x7</Text>
+          <Text style={styles.message}>
+            Do you want to remove this test/package from your cart?
+          </Text>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={[styles.button, styles.yesButton]} onPress={onConfirm}>
+              <Text style={styles.yesText}>Yes</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={[styles.button, styles.noButton]} onPress={onClose}>
+              <Text style={styles.noText}>No</Text>
+            </TouchableOpacity>
+          </View>
         </View>
-        </View>
-      </View>
-    </Modal>
+      </TouchableOpacity>
+    </RNModal>
   );
 };
 
 const styles = StyleSheet.create({
   modalContainer: {
-    flex:1,
-    justifyContent: 'center',  // Center content within the modal
-    alignItems: 'center', 
+    flex: 1,
+    justifyContent: "center", // Center content within the modal
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.4)", // Simulate backdrop with 40% opacity
   },
   modalContent: {
-    width: '85%',
+    width: "85%",
     backgroundColor: colors.white,
     borderRadius: 10,
     padding: 20,
-    alignItems: 'center',
+    alignItems: "center",
   },
   title: {
     fontSize: 16,

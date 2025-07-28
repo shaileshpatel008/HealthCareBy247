@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { View, ActivityIndicator, StyleSheet, Modal, Text } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Modal as RNModal, Text } from 'react-native';
 import colors from '../utils/colors';
 
 const LoaderScreen = ({ visible }) => {
   return (
-    <Modal transparent={true} visible={visible} animationType="fade">
+    <RNModal transparent={true} visible={visible} animationType="fade">
       <View style={styles.container}>
         <View style={styles.loaderContainer}>
           <ActivityIndicator size="large" color={colors.primary} />
           <Text style={styles.loadingText}>Loading...</Text>
         </View>
       </View>
-    </Modal>
+    </RNModal>
   );
 };
 

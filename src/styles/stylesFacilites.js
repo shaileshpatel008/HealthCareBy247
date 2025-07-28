@@ -8,7 +8,7 @@ const stylesFacilites = StyleSheet.create({
   headerIcon: {
     width: 30,
     height: 30,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   emptySpace: {
     width: 30, 
@@ -17,7 +17,7 @@ const stylesFacilites = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     color: '#fff',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     flex: 1,
     textAlign: "center",
   },

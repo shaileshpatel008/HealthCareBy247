@@ -24,13 +24,15 @@ const stylesPackage = StyleSheet.create({
     margin: 16,
     borderWidth: 1,
     borderColor: colors.primaryBorder,
-    height:46,
+   
     borderRadius: 5,
     paddingHorizontal: 16,
   },
   searchInput: {
     flex: 1,
     padding: 0,
+    height:46,
+    
   },
   clearText: {
     width:22,
@@ -98,13 +100,26 @@ const stylesPackage = StyleSheet.create({
     borderRadius: 11,
     height:22,
   },
+  // addButton: {
+  //   width:90,
+  //   height:45,
+  //   borderRadius:4,
+  //   justifyContent:'center',
+  //   backgroundColor: colors.primary,
+  // },
   addButton: {
-    width:90,
-    height:45,
-    borderRadius:4,
-    justifyContent:'center',
+    width: 90,
+    height: 45,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: colors.primary,
-  },
+    shadowColor: '#000',
+    shadowOffset: { width: 3, height: 3 },
+    shadowOpacity: 0.5,
+    shadowRadius: 3,
+    elevation: 6,
+  }, 
   buttonView:{
     margin:3,
     width: '30%',  
@@ -127,7 +142,7 @@ const stylesPackage = StyleSheet.create({
  headerIcon: {
     width: 30,
     height: 30,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   headerTitle: {
     fontSize: 18,
