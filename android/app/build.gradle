@@ -119,6 +119,14 @@ android {
     }
 }
 
+configurations.all {
+    resolutionStrategy.dependencySubstitution {
+        // react-native-image-crop-picker pulls ucrop 2.2.6-native, whose prebuilt x86_64 .so is only
+        // 4 KB-aligned. 2.2.10 is pure Java (no .so) with the same API, so it meets the 16 KB requirement.
+        substitute module("com.github.yalantis:ucrop") using module("com.github.yalantis:ucrop:2.2.10")
+    }
+}
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
