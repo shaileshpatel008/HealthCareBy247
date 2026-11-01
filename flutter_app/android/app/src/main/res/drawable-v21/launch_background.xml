@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plain brand indigo while the engine starts; the Flutter splash (logo
+     scale-in + pulse rings) takes over on the same colour. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_indigo" />
+</layer-list>
