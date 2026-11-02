@@ -18,6 +18,8 @@ class DashboardController extends GetxController {
 
   final RxList<PackageModel> popular = <PackageModel>[].obs;
   final RxInt testCount = 0.obs;
+  final RxInt packageCount = 0.obs;
+  final RxInt branchCount = 0.obs;
   final RxnNum lowestTestPrice = RxnNum();
 
   Timer? _autoPlay;
@@ -52,6 +54,9 @@ class DashboardController extends GetxController {
       popular.assignAll(sorted.where((p) => p.tests.isNotEmpty).take(8));
       final tests = await LabRepository.instance.tests(refresh: refresh);
       testCount.value = tests.length;
+      packageCount.value = packs.length;
+      // Branch count for the "lab in numbers" strip (branches.php).
+      LabRepository.instance.branches(refresh: refresh).then((b) => branchCount.value = b.length).catchError((_) => 0);
       final rates = tests.map((t) => t.rate).where((r) => r > 0);
       lowestTestPrice.value = rates.isEmpty ? null : rates.reduce((a, b) => a < b ? a : b);
     } on ApiException {

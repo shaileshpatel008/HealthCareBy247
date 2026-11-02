@@ -141,12 +141,18 @@ class _MenuTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final home = Get.find<HomeController>();
     return Obx(() {
+      // Read both observables on every build: GetX throws ("improper use
+      // of GetX") for an Obx that reads none, which is what rows like
+      // About us / Facilities did when the reads sat inside branches —
+      // they rendered as error boxes in the drawer.
+      final tab = home.tab.value;
+      final cartCount = cart.items.length;
       // Highlight the entry for the tab that's showing.
       final isActive = switch (entry.label) {
-        'Home' => home.tab.value == HomeTab.home,
-        'Book a test' => home.tab.value == HomeTab.tests,
-        'Health packages' => home.tab.value == HomeTab.packages,
-        'Contact us' => home.tab.value == HomeTab.contact,
+        'Home' => tab == HomeTab.home,
+        'Book a test' => tab == HomeTab.tests,
+        'Health packages' => tab == HomeTab.packages,
+        'Contact us' => tab == HomeTab.contact,
         _ => false,
       };
       return Pressable(
@@ -169,13 +175,13 @@ class _MenuTile extends StatelessWidget {
                   ),
                 ),
               ),
-              if (entry.badge && cart.items.isNotEmpty)
+              if (entry.badge && cartCount > 0)
                 Container(
                   constraints: const BoxConstraints(minWidth: 22),
                   height: 22,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(color: AppColors.sun, borderRadius: BorderRadius.circular(11)),
-                  child: Text('${cart.items.length}', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.sunInk)),
+                  child: Text('$cartCount', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: AppColors.sunInk)),
                 ),
             ],
           ),

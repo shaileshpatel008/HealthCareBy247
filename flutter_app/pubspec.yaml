@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 # 2.0.0+12: above the live React Native release (1.0.10 / versionCode 11), so
 # this build can later replace it on Google Play without a version clash.
-version: 2.0.0+12
+version: 2.0.1+13
 
 environment:
   sdk: ^3.13.7

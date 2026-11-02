@@ -23,7 +23,7 @@ Flutter 3.47 / Dart 3.13 or newer.
 | Android applicationId | `com.healthcarelab` | `com.healthcarelab.flutter` |
 | iOS bundle id | `in.healthcare24x7.pathlab` | `com.healthcarelab.flutter` |
 | Launcher name | Health Care Lab | HC Lab Flutter |
-| Version | 1.0.10 (11) | 2.0.0 (12) |
+| Version | 1.0.10 (11) | 2.0.1 (13) |
 
 Different ids, so both stay installed on the same phone.
 

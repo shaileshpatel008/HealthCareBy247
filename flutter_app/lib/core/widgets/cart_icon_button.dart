@@ -11,7 +11,10 @@ import 'pressable.dart';
 /// time something is added (motion board "Add to cart"), and the button is
 /// the landing target for the fly-to-cart animation.
 class CartIconButton extends StatefulWidget {
-  const CartIconButton({super.key});
+  const CartIconButton({super.key, this.dark = false});
+
+  /// White-on-translucent variant for dark headers (Home hero).
+  final bool dark;
 
   @override
   State<CartIconButton> createState() => _CartIconButtonState();
@@ -48,10 +51,17 @@ class _CartIconButtonState extends State<CartIconButton> {
             Container(
               width: 46,
               height: 46,
-              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
-              child: const Icon(Icons.shopping_cart_outlined, size: 22, color: AppColors.ink),
+              decoration: BoxDecoration(
+                color: widget.dark ? Colors.white.withValues(alpha: 0.12) : Colors.white,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Icon(Icons.shopping_cart_outlined, size: 22, color: widget.dark ? Colors.white : AppColors.ink),
             ),
-            Positioned(top: -4, right: -2, child: CartBadge(cart: cart)),
+            Positioned(
+              top: -4,
+              right: -2,
+              child: CartBadge(cart: cart, borderColor: widget.dark ? AppColors.ink : AppColors.background),
+            ),
           ],
         ),
       ),
